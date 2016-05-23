@@ -1,0 +1,17 @@
+{
+  "name": "web-midi",
+  "version": "1.0.0",
+  "description": "Hosts a website that shows midi controller. That makes sense if you want to fire e.g. Midi events by hitting keys on your smartphone!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/.bin/forever --watchDirectory . -w ./index.js"
+  },
+  "author": "Sebastian Friedemann",
+  "license": "MIT",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "forever": "^0.15.1",
+    "midi": "^0.9.4"
+  }
+}

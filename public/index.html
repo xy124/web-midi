@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="components/jquery/dist/jquery.min.js"></script>
+    <script>
+var chan0noteOff = 128;
+var velocity = 50;
+
+$(()=>{
+  var i = 0;
+  $("td").each((index, element) => {
+    $(element).click(() => {
+      console.log("clicked control", index);
+      $.get("raw",{"params[]":[chan0noteOff, index, velocity]});
+    });
+  });
+});
+
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+</html>
+
